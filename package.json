@@ -1,6 +1,6 @@
 {
   "name": "dsh-custom-instructions",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "类 Codex 自定义指令：在设置里编辑 ~/.dsh/AGENTS.md 全局指令，对本机所有会话、所有模型生效。Codex-style custom instructions panel for DeepSeek Harness.",
   "type": "module",
   "main": "lib/index.js",
@@ -20,6 +20,9 @@
       "platform": "web"
     }
   },
+  "engines": {
+    "node": ">=20"
+  },
   "keywords": [
     "dsh",
     "dsh-plugin",
@@ -33,12 +36,18 @@
     "assets",
     "cordis.patch.yml",
     "README.md",
+    "README.zh.md",
     "LICENSE"
   ],
   "peerDependencies": {
     "react": "^18.2.0",
-    "@deepseek-ai/cordis": "^4.0.1",
-    "@deepseek-ai/dsh-home-paths": "^0.1.0-rc.6"
+    "@deepseek-ai/cordis": ">=4.0.1 <5.0.0",
+    "@deepseek-ai/dsh-home-paths": ">=0.1.0-rc.6 <0.3.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
   },
   "license": "MIT"
 }
